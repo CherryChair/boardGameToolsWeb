@@ -1,0 +1,17 @@
+.site-header {
+    background-color: #098F09;
+    opacity: 0.9;
+    backdrop-filter: invert(80%) blur(20px);
+}
+
+.site-header a {
+    color: honeydew;
+    /* font-size: 15px;  */
+    /* transition: ease-in-out font-size .15s; */
+}
+
+.site-header a:hover {
+    color: #fff;
+    /* font-size: 16px;  */
+    text-decoration: none;
+}

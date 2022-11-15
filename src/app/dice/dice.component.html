@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-info mb-3 mr-1" (click)="throwAllDice();" style="background-color: #098F09;" [disabled]="buttonsDisabled">Throw All</button>
+<button type="button" class="btn btn-info mb-3 mr-1" (click)="addDice()" style="background-color: #66a800;" [disabled]="buttonsDisabled">Add dice</button>
+<button type="button" class="btn btn-info mb-3 mr-1" (click)="removeDice()" style="background-color: #9c9302;" [disabled]="buttonsDisabled">Remove dice</button>
+<button type="button" class="btn btn-info mb-3 mr-1" (click)="resetDice()" style="background-color: #027A3D;" [disabled]="buttonsDisabled">Reset</button>
+<button type="button" class="btn btn-info mb-3" (click)="toggleInfo()" style="background-color: #039995;" [disabled]="buttonsDisabled">Info</button>
+<div class="mb-4"  *ngIf="this.infoDisplayed" >
+    <!-- <b class="mr-2" *ngFor="let diceNum of [1, 2, 3, 4, 5, 6]">Liczba <img src="assets/{{diceNum}}.png" alt="{{diceNum}}.png" width="20px"> = <span style="font-weight: normal;">{{this.count[diceNum-1]}},</span></b>
+    <b>Suma =</b> {{sum}} -->
+    <table style="width:50%">
+        <tr>
+            <th *ngFor="let diceNum of [1, 2, 3, 4, 5, 6]" style="border-bottom: 1px solid #333;"> <img src="assets/{{diceNum}}.png" alt="{{diceNum}}.png" width="30px"></th>
+            <th>Suma</th>
+            <th>Ilość kości</th>
+        </tr>
+        <tr>
+            <td *ngFor="let diceNum of [0, 1, 2, 3, 4, 5]">{{count[diceNum]}}</td>
+            <td>{{sum}}</td>
+            <td>{{dice.length}}</td>
+        </tr>
+    </table>
+</div>
+<div class="row">
+    <div *ngFor="let result of dice; let indexOfelement=index;" >
+        <img class="mr-2 mb-2" src="assets/{{result}}.png" alt="{{result}}.png" width="200px" style="cursor: pointer; border-radius: 30px;" (click)="throwDice(indexOfelement)">
+    </div>
+</div>
+
