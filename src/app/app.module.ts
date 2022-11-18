@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DiceComponent } from './dice/dice.component';
 import { TeamsComponent } from './teams/teams.component';
 import { PointsComponent } from './points/points.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PointsComponent } from './points/points.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
